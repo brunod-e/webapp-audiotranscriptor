@@ -5,18 +5,22 @@ import { DropContainer, UploadMessage } from "./styles";
 export default class Upload extends Component {
   renderDragMessage = (isDragActive, isDragReject) => {
     if (!isDragActive) {
-      return <UploadMessage>Drag your audios here </UploadMessage>;
+      return (
+        <UploadMessage>Select an .mp3 file to convert into text.</UploadMessage>
+      );
     }
 
     if (isDragReject) {
       return (
         <UploadMessage type="error">
-          File not supported, make sure that is a .mp3 file
+          File not supported, make sure that is a .mp3 file!
         </UploadMessage>
       );
     }
 
-    return <UploadMessage type="success">Drop your audios here</UploadMessage>;
+    return (
+      <UploadMessage type="success">Drop your .mp3 files here!</UploadMessage>
+    );
   };
 
   render() {

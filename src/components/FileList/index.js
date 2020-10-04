@@ -8,10 +8,10 @@ import {
 } from "react-icons/md";
 import { Container, FileInfo } from "./styles";
 
-export default FileList = ({ files }) =>
+export default FileList = ({ files }) => (
   <Container>
-    {files.map((uploadedFile) => (
-      <li key={uploadedFile.id}>
+    {files.map((uploadedFile, index) => (
+      <li key={index}>
         <FileInfo>
           <MdDescription style={{ marginRight: 8 }} size={24} color="#6E808F" />
           <div>
@@ -23,10 +23,10 @@ export default FileList = ({ files }) =>
           {!uploadedFile.uploaded && !uploadedFile.error && (
             <CircularProgressbar
               styles={{
-                root: { width: 24 },
-                path: { stroke: "#223951" },
+                root: { width: 30 },
+                path: { stroke: "#78e5d5" },
               }}
-              strokeWidth={10}
+              strokeWidth={7}
               value={uploadedFile.progress}
             />
           )}
@@ -40,9 +40,10 @@ export default FileList = ({ files }) =>
               <MdGetApp style={{ marginRight: 8 }} size={24} color="#6E808F" />
             </a>
           )}
-          {uploadedFile.uploaded && <MdCheckCircle size={24} color="#223951" />}
-          {uploadedFile.error && <MdError size={24} color="#223951" />}
+          {uploadedFile.uploaded && <MdCheckCircle size={24} color="#0D724E" />}
+          {uploadedFile.error && <MdError size={24} color="#9A0607" />}
         </div>
       </li>
     ))}
   </Container>
+);

@@ -20,7 +20,7 @@ export const DropContainer = styled.div.attrs({
 `;
 
 const messageColors = {
-  default: "#6E808F",
+  default: "#909EA2",
   error: "#e57878",
   success: "#78e5d5",
 };
@@ -30,5 +30,5 @@ export const UploadMessage = styled.p`
   color: ${(props) => messageColors[props.type || "default"]};
   justify-content: center;
   align-items: center;
-  padding: 15px 0;
+  padding: 38px 0;
 `;
