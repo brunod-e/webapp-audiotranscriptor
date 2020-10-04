@@ -1,11 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import Transcriptor from "./main/transcriptor";
+import App from "./App";
 
-ReactDOM.render(
-  <div>
-    <Transcriptor />
-  </div>,
-  document.getElementById("root")
-);
+ReactDOM.render(<App />, document.getElementById("root"));
