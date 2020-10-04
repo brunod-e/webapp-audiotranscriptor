@@ -8,7 +8,7 @@ import {
 } from "react-icons/md";
 import { Container, FileInfo } from "./styles";
 
-const FileList = ({ files }) => (
+export default FileList = ({ files }) =>
   <Container>
     {files.map((uploadedFile) => (
       <li key={uploadedFile.id}>
@@ -46,6 +46,3 @@ const FileList = ({ files }) => (
       </li>
     ))}
   </Container>
-);
-
-export default FileList;

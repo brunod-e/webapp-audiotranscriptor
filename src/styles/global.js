@@ -4,7 +4,7 @@ import "react-circular-progressbar/dist/styles.css";
 export default createGlobalStyle`
   @font-face {
   font-family: "RobotoMono";
-  src: url("../fonts/RobotoMono-Thin.ttf");
+  src: url("../fonts/RobotoMono-Thin.ttf") format("ttf");
 }
 
 * {
@@ -21,5 +21,9 @@ export default createGlobalStyle`
   }
   html, body, #root {
     height: 100%;
+  }
+
+  .content {
+    flex-direction: column;
   }
 `;

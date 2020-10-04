@@ -2,13 +2,14 @@ import React, { Component } from "react";
 import { uniqueId } from "lodash";
 import filesize from "filesize";
 
-import api from "./services/api";
 
 import GlobalStyle from "./styles/global";
-import { Container, Content } from "./styles";
+import { Content } from "./styles/content";
+import { Container } from "./styles/container";
 
-import Upload from "./components/Upload/index";
-import FileList from "./components/FileList/index";
+import Upload from "./components/Upload";
+import FileList from "./components/FileList";
+import api from "./services/api";
 
 class App extends Component {
   state = {
@@ -78,8 +79,8 @@ class App extends Component {
     const { uploadedFiles } = this.state;
 
     return (
-      <Container>
-        <div class="logo-container">
+      <Container className="content">
+        <div className="logo-container">
           <img src="/images/logo.png" alt="Elint" />
           <h2>Your audio transcription platform</h2>
         </div>
