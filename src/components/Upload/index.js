@@ -6,7 +6,7 @@ export default class Upload extends Component {
   renderDragMessage = (isDragActive, isDragReject) => {
     if (!isDragActive) {
       return (
-        <UploadMessage>Select a .mp3 file to convert into text.</UploadMessage>
+        <UploadMessage>Select an .mp3 file to convert into text.</UploadMessage>
       );
     }
 
