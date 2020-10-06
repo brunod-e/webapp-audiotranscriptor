@@ -13,7 +13,7 @@ export default class Upload extends Component {
     if (isDragReject) {
       return (
         <UploadMessage type="error">
-          File not supported, make sure that is a .mp3 file!
+          File not supported, make sure that is an .mp3 file!
         </UploadMessage>
       );
     }
